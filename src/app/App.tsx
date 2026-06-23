@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Github, Linkedin, Mail, ExternalLink, Code2, ChevronDown, FileText } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Code2, ChevronDown, FileText, Menu, X } from "lucide-react";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -572,6 +572,7 @@ export default function App() {
   }, []);
 
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const svgWrapRef = useRef<HTMLDivElement>(null);
   const [svgRect, setSvgRect] = useState<DOMRect | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -671,20 +672,22 @@ export default function App() {
       <nav
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
-          background: scrolled
+          background: scrolled || isMobileMenuOpen
             ? "rgba(6, 11, 23, 0.88)"
             : "transparent",
-          backdropFilter: scrolled ? "blur(16px)" : "none",
-          borderBottom: scrolled ? "1px solid rgba(56,189,248,0.12)" : "none",
+          backdropFilter: scrolled || isMobileMenuOpen ? "blur(16px)" : "none",
+          borderBottom: scrolled || isMobileMenuOpen ? "1px solid rgba(56,189,248,0.12)" : "none",
         }}
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <span
-            className="text-primary font-bold text-lg tracking-widest"
+            className="text-primary font-bold text-lg tracking-widest z-50"
             style={{ fontFamily: "'Orbitron', sans-serif" }}
           >
             RAFAY<span className="text-accent">.</span>
           </span>
+          
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
               <button
@@ -704,6 +707,46 @@ export default function App() {
           >
             <FileText size={14} /> Resume
           </a>
+
+          {/* Mobile Hamburger Toggle */}
+          <button
+            className="md:hidden text-primary p-2 z-50"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle Menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Menu Dropdown */}
+        <div
+          className={`md:hidden absolute top-full left-0 right-0 overflow-hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen ? "max-h-80 border-b border-primary/20 opacity-100" : "max-h-0 opacity-0"
+          }`}
+          style={{ background: "rgba(6, 11, 23, 0.95)", backdropFilter: "blur(16px)" }}
+        >
+          <div className="px-6 py-4 flex flex-col gap-4">
+            {NAV_LINKS.map((link) => (
+              <button
+                key={link}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  scrollTo(link.toLowerCase());
+                }}
+                className="text-left text-sm text-muted-foreground hover:text-primary transition-colors duration-200 tracking-wide py-2"
+              >
+                {link}
+              </button>
+            ))}
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm border border-primary/40 text-primary px-4 py-2 rounded-full hover:bg-primary/10 transition-all duration-200 w-fit mt-2"
+            >
+              <FileText size={14} /> Resume
+            </a>
+          </div>
         </div>
       </nav>
 
