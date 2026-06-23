@@ -1,6 +1,6 @@
 # Rafay - Personal Portfolio
 
-A modern, interactive portfolio showcasing my work as a Full Stack Developer and Machine Learning Engineer. Built to be highly responsive, performant, and visually striking.
+A modern, interactive portfolio showcasing my work as a Full Stack Developer and Machine Learning Engineer. The design for this portfolio was created using Figma, and it is built to be highly responsive, performant, and visually striking.
 
 ## Features
 
@@ -23,8 +23,8 @@ To run this project locally on your machine:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ProgrammingWithRafay/Interactive-3D-Portfolio.git
-   cd "Interactive 3D Portfolio"
+   git clone https://github.com/ProgrammingWithRafay/Portfolio.git
+   cd Portfolio
    ```
 
 2. Install the dependencies:

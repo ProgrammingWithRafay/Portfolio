@@ -41,6 +41,7 @@ const PROJECTS: Project[] = [
       "A full-stack student hostel booking platform featuring real-time updates, dual dashboards for students and owners, and comprehensive admin management.",
     tech: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
     github: "https://github.com/ProgrammingWithRafay/HostelSpot",
+    live: "https://hostel-spot.vercel.app/",
     border: "#38bdf8",
     glow: "rgba(56,189,248,0.12)",
   },
@@ -49,6 +50,7 @@ const PROJECTS: Project[] = [
     description:
       "Modern, visually rich 3D portfolio built with React and SVG animations. Features custom shaders, dynamic mouse tracking, and parallax effects.",
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    github: "https://github.com/ProgrammingWithRafay/Portfolio",
     border: "#818cf8",
     glow: "rgba(129,140,248,0.12)",
   },
@@ -1129,22 +1131,26 @@ export default function App() {
                   </div>
 
                   <div className="flex items-center gap-4 pt-1">
-                    <a
-                      href={proj.github || "#"}
-                      target={proj.github ? "_blank" : undefined}
-                      rel={proj.github ? "noopener noreferrer" : undefined}
-                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200"
-                    >
-                      <Github size={13} /> Code
-                    </a>
-                    <a
-                      href={proj.live || "#"}
-                      target={proj.live ? "_blank" : undefined}
-                      rel={proj.live ? "noopener noreferrer" : undefined}
-                      className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200"
-                    >
-                      <ExternalLink size={13} /> Live
-                    </a>
+                    {proj.github && (
+                      <a
+                        href={proj.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200"
+                      >
+                        <Github size={13} /> Code
+                      </a>
+                    )}
+                    {proj.live && (
+                      <a
+                        href={proj.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200"
+                      >
+                        <ExternalLink size={13} /> Live
+                      </a>
+                    )}
                   </div>
                 </div>
               </RevealOnScroll>
