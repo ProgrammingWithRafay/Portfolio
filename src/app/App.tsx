@@ -22,6 +22,9 @@ const SKILLS = [
   { name: "JWT", tag: "JWT", color: "#ffffff" },
   { name: "jQuery", tag: "jQ", color: "#0769AD" },
   { name: "Nodemon", tag: "NM", color: "#76d04b" },
+  { name: "GitHub Actions", tag: "GA", color: "#2088FF" },
+  { name: "Supabase", tag: "SB", color: "#3ECF8E" },
+  { name: "Railway", tag: "RW", color: "#ffffff" },
 ];
 
 type Project = {
@@ -78,6 +81,14 @@ const PROJECTS: Project[] = [
     github: "https://github.com/alif223571/Final-Year-Project-One",
     border: "#ec4899",
     glow: "rgba(236,72,153,0.12)",
+  },
+  {
+    title: "MiniC Compiler",
+    description: "A 7-phase C compiler built using Flex and Bison. Takes a subset of C code through lexical/syntax/semantic analysis, TAC generation, optimization, and x86 pseudo-assembly output.",
+    tech: ["C", "Flex", "Bison", "Make"],
+    github: "https://github.com/ProgrammingWithRafay/Mini-C-Language-Compiler",
+    border: "#8b5cf6",
+    glow: "rgba(139,92,246,0.12)",
   },
 ];
 
@@ -700,7 +711,7 @@ export default function App() {
             ))}
           </div>
           <a
-            href="#"
+            href="/Rafay_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex items-center gap-2 text-sm border border-primary/40 text-primary px-4 py-2 rounded-full hover:bg-primary/10 transition-all duration-200"
@@ -739,7 +750,7 @@ export default function App() {
               </button>
             ))}
             <a
-              href="#"
+              href="/Rafay_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm border border-primary/40 text-primary px-4 py-2 rounded-full hover:bg-primary/10 transition-all duration-200 w-fit mt-2"
@@ -971,7 +982,7 @@ export default function App() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { num: "FAST", label: "University", suffix: "" },
-                { num: "5", label: "Projects", suffix: "" },
+                { num: "6", label: "Projects", suffix: "" },
                 { num: "5", label: "Languages", suffix: "+" },
                 { num: "2026", label: "Graduate", suffix: "" },
               ].map((s) => (
