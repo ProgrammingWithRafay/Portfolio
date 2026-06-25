@@ -518,9 +518,8 @@ function RevealOnScroll({ children, className = "", delay = 0 }: { children: Rea
   return (
     <div
       ref={ref}
-      className={`transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-      } ${className}`}
+      className={`transition-all duration-1000 ease-[cubic-bezier(0.25,1,0.5,1)] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+        } ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >
       {children}
@@ -563,7 +562,7 @@ export default function App() {
   useEffect(() => {
     // Lock body scroll
     document.body.style.overflow = "hidden";
-    
+
     // Hold loading screen for 2.5 seconds, then open curtains
     const openTimer = setTimeout(() => {
       setLoadingStage("opening");
@@ -645,29 +644,26 @@ export default function App() {
       {loadingStage !== "done" && (
         <div className="fixed inset-0 z-[100] flex flex-col pointer-events-none">
           {/* Top Curtain */}
-          <div 
-            className={`w-full h-1/2 bg-[#090e17] transition-transform duration-[1500ms] ease-[cubic-bezier(0.76,0,0.24,1)] border-b border-primary/20 flex justify-center items-end pb-4 ${
-              loadingStage === "opening" ? "-translate-y-full" : "translate-y-0"
-            }`}
+          <div
+            className={`w-full h-1/2 bg-[#090e17] transition-transform duration-[1500ms] ease-[cubic-bezier(0.76,0,0.24,1)] border-b border-primary/20 flex justify-center items-end pb-4 ${loadingStage === "opening" ? "-translate-y-full" : "translate-y-0"
+              }`}
             style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.5)" }}
           />
           {/* Bottom Curtain */}
-          <div 
-            className={`w-full h-1/2 bg-[#090e17] transition-transform duration-[1500ms] ease-[cubic-bezier(0.76,0,0.24,1)] border-t border-primary/20 flex justify-center items-start pt-4 ${
-              loadingStage === "opening" ? "translate-y-full" : "translate-y-0"
-            }`}
+          <div
+            className={`w-full h-1/2 bg-[#090e17] transition-transform duration-[1500ms] ease-[cubic-bezier(0.76,0,0.24,1)] border-t border-primary/20 flex justify-center items-start pt-4 ${loadingStage === "opening" ? "translate-y-full" : "translate-y-0"
+              }`}
             style={{ boxShadow: "0 -10px 30px rgba(0,0,0,0.5)" }}
           />
-          
+
           {/* Glowing RAFAY. Text Centered overlay */}
-          <div 
-            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-700 ${
-              loadingStage === "opening" ? "opacity-0" : "opacity-100"
-            }`}
+          <div
+            className={`absolute inset-0 flex items-center justify-center transition-opacity duration-700 ${loadingStage === "opening" ? "opacity-0" : "opacity-100"
+              }`}
           >
-            <div 
-              className="text-4xl md:text-5xl font-bold tracking-widest text-primary animate-pulse" 
-              style={{ 
+            <div
+              className="text-4xl md:text-5xl font-bold tracking-widest text-primary animate-pulse"
+              style={{
                 fontFamily: "'Orbitron', sans-serif",
                 textShadow: "0 0 20px rgba(56,189,248,0.5), 0 0 40px rgba(56,189,248,0.3)"
               }}
@@ -697,7 +693,7 @@ export default function App() {
           >
             RAFAY<span className="text-accent">.</span>
           </span>
-          
+
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
@@ -731,9 +727,8 @@ export default function App() {
 
         {/* Mobile Menu Dropdown */}
         <div
-          className={`md:hidden absolute top-full left-0 right-0 overflow-hidden transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen ? "max-h-80 border-b border-primary/20 opacity-100" : "max-h-0 opacity-0"
-          }`}
+          className={`md:hidden absolute top-full left-0 right-0 overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? "max-h-80 border-b border-primary/20 opacity-100" : "max-h-0 opacity-0"
+            }`}
           style={{ background: "rgba(6, 11, 23, 0.95)", backdropFilter: "blur(16px)" }}
         >
           <div className="px-6 py-4 flex flex-col gap-4">
@@ -1239,7 +1234,7 @@ export default function App() {
               </h2>
               <p className="text-muted-foreground">
                 Open to full-time roles, internships, and interesting collaborations.
-                Drop me a line — I reply to everything.
+                Drop me a line, I'll try to reply to everything.
               </p>
             </div>
 
@@ -1252,7 +1247,7 @@ export default function App() {
                 <Mail size={20} />
                 Contact Me
               </a>
-              <span 
+              <span
                 className="text-sm text-muted-foreground/80 select-all"
                 style={{ fontFamily: "'JetBrains Mono', monospace" }}
               >
