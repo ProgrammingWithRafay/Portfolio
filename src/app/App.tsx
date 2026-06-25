@@ -279,34 +279,34 @@ function BoyCharacter({
       />
 
       {/* ── Hair ── */}
-      {/* Back layer */}
+      {/* Back layer - full coverage over top and sides of head */}
       <path
-        d="M 80 152 Q 74 100 105 72 Q 128 55 150 53 Q 172 55 195 72 Q 226 100 220 152 Q 225 115 215 96 Q 196 68 165 60 Q 155 57 150 57 Q 145 57 135 60 Q 104 68 85 96 Q 75 115 80 152 Z"
+        d="M 76 178 Q 70 150 72 115 Q 76 82 98 62 Q 122 44 150 42 Q 178 44 202 62 Q 224 82 228 115 Q 230 150 224 178 L 220 170 Q 224 145 222 118 Q 218 90 200 74 Q 180 58 150 56 Q 120 58 100 74 Q 82 90 78 118 Q 76 145 80 170 Z"
         fill="url(#hairGrad)"
       />
-      {/* Side sweep left */}
+      {/* Side volume left - extends down to ear level */}
       <path
-        d="M 80 155 Q 74 140 76 120 Q 78 105 84 94 Q 82 125 82 155 Z"
+        d="M 76 178 Q 72 160 72 140 Q 72 120 76 105 Q 80 92 86 84 Q 82 100 80 120 Q 78 145 80 170 Z"
         fill="#1a0c04"
       />
-      {/* Side sweep right */}
+      {/* Side volume right */}
       <path
-        d="M 220 155 Q 226 140 224 120 Q 222 105 216 94 Q 218 125 218 155 Z"
+        d="M 224 178 Q 228 160 228 140 Q 228 120 224 105 Q 220 92 214 84 Q 218 100 220 120 Q 222 145 220 170 Z"
         fill="#1a0c04"
       />
-      {/* Top hair - stylish side part */}
+      {/* Top hair - full stylish volume */}
       <path
-        d="M 84 130 Q 100 82 150 68 Q 200 82 216 130 Q 196 106 168 99 Q 156 96 150 96 Q 140 96 128 100 Q 108 108 84 130 Z"
+        d="M 80 140 Q 88 95 120 70 Q 138 58 150 56 Q 162 58 180 70 Q 212 95 220 140 Q 205 105 180 88 Q 164 78 150 76 Q 136 78 120 88 Q 95 105 80 140 Z"
         fill="#241108"
       />
       {/* Styled quiff / front tuft */}
       <path
-        d="M 115 85 Q 138 70 162 72 Q 178 74 188 82 Q 168 76 150 75 Q 133 76 115 85 Z"
+        d="M 108 82 Q 128 62 150 58 Q 172 62 192 82 Q 175 68 150 64 Q 125 68 108 82 Z"
         fill="#3d2009"
       />
       {/* Hair wave highlight */}
       <path
-        d="M 105 100 Q 128 82 158 82"
+        d="M 100 98 Q 125 78 160 78"
         fill="none"
         stroke="#5a3015"
         strokeWidth="2"
@@ -764,7 +764,7 @@ export default function App() {
       {/* ── Hero ── */}
       <section
         id="hero"
-        className="min-h-screen flex items-center relative overflow-hidden pt-20"
+        className="min-h-screen flex items-center relative overflow-hidden pt-20 pb-24 lg:pb-0"
       >
         {/* Grid background */}
         <div
@@ -961,7 +961,7 @@ export default function App() {
         </div>
 
         {/* Scroll cue */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground/50 flex flex-col items-center gap-1">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground/50 hidden md:flex flex-col items-center gap-1">
           <span className="text-xs tracking-widest">SCROLL</span>
           <ChevronDown size={16} className="animate-bounce" />
         </div>
