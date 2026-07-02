@@ -42,8 +42,8 @@ const PROJECTS: Project[] = [
   {
     title: "HostelSpot",
     description:
-      "A full-stack student hostel booking platform featuring real-time updates, dual dashboards for students and owners, and comprehensive admin management.",
-    tech: ["React", "TypeScript", "Supabase", "Tailwind CSS", "GitHub Actions"],
+      "Developed a full-stack hostel management platform featuring secure role-based routing for students and owners. Implemented interactive map-based search using Leaflet, automated email notifications via Deno Edge Functions and Brevo, and real-time data synchronization with Supabase PostgreSQL.",
+    tech: ["React 18", "TypeScript", "Supabase", "Tailwind CSS v4", "Deno Edge Functions", "Leaflet", "Brevo"],
     github: "https://github.com/ProgrammingWithRafay/HostelSpot",
     live: "https://hostel-spot.vercel.app/",
     border: "#38bdf8",
@@ -52,16 +52,17 @@ const PROJECTS: Project[] = [
   {
     title: "Interactive 3D Portfolio",
     description:
-      "Modern, visually rich 3D portfolio built with React and SVG animations. Features custom shaders, dynamic mouse tracking, and parallax effects.",
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+      "A highly interactive, visually immersive developer portfolio. Engineered complex SVG character animations with dynamic mouse-tracking pupils, cinematic loading sequences, and mathematically calculated 3D tilt effects using React hooks and native DOM APIs.",
+    tech: ["React 18", "TypeScript", "Tailwind CSS", "SVG Filters", "Vite"],
     github: "https://github.com/ProgrammingWithRafay/Portfolio",
     border: "#818cf8",
     glow: "rgba(129,140,248,0.12)",
   },
   {
     title: "PakTravel AI System",
-    description: "An AI-powered intercity bus travel system implementing classical search, propositional logic, CSP scheduling, neural networks, and K-Means clustering.",
-    tech: ["Python", "scikit-learn", "Pandas", "NumPy"],
+    description:
+      "Developed a comprehensive AI suite for intercity travel. Implemented A* search for route optimization, a propositional logic engine for legal inference, CSP with AC-3 for bus scheduling, MLP neural networks for delay prediction, and K-Means clustering for passenger segmentation.",
+    tech: ["Python", "scikit-learn", "NetworkX", "Pandas", "Neural Networks", "CSP"],
     github: "https://github.com/ProgrammingWithRafay/PakTravel-AI-System",
     border: "#10b981",
     glow: "rgba(16,185,129,0.12)",
@@ -85,8 +86,9 @@ const PROJECTS: Project[] = [
   },
   {
     title: "MiniC Compiler",
-    description: "A 7-phase C compiler built using Flex and Bison. Takes a subset of C code through lexical/syntax/semantic analysis, TAC generation, optimization, and x86 pseudo-assembly output.",
-    tech: ["C", "Flex", "Bison", "Make"],
+    description:
+      "Engineered a complete 7-phase C compiler from scratch using C, Flex, and Bison. Features lexical and syntax analysis (AST), semantic validation, Three-Address Code (TAC) generation with Constant Folding and Dead Code Elimination, x86 pseudo-assembly generation, and a custom TAC interpreter.",
+    tech: ["C", "Flex", "Bison", "AST", "TAC", "Make"],
     github: "https://github.com/ProgrammingWithRafay/Mini-C-Language-Compiler",
     border: "#8b5cf6",
     glow: "rgba(139,92,246,0.12)",
