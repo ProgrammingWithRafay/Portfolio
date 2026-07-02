@@ -43,17 +43,26 @@ const PROJECTS: Project[] = [
     title: "HostelSpot",
     description:
       "Developed a full-stack hostel management platform featuring secure role-based routing for students and owners. Implemented interactive map-based search using Leaflet, automated email notifications via Deno Edge Functions and Brevo, and real-time data synchronization with Supabase PostgreSQL.",
-    tech: ["React 18", "TypeScript", "Supabase", "Tailwind CSS v4", "Deno Edge Functions", "Leaflet", "Brevo"],
+    tech: ["React", "TypeScript", "Supabase", "Tailwind CSS", "Deno Edge Functions", "Leaflet", "Brevo"],
     github: "https://github.com/ProgrammingWithRafay/HostelSpot",
     live: "https://hostel-spot.vercel.app/",
     border: "#38bdf8",
     glow: "rgba(56,189,248,0.12)",
   },
   {
+    title: "CarInsight Pro",
+    description: "Built a MERN-stack platform for side-by-side car specification comparisons with an interactive matchmaking quiz and a custom CMS. Designed RESTful API routes in Express to serve structured car data from MongoDB. Configured a CI/CD pipeline using GitHub Actions, running 7 Jest and Supertest integration tests against an in-memory MongoDB instance on every push before deployment to Railway.",
+    tech: ["React", "Node.js", "MongoDB", "Express", "TanStack Query", "Railway", "GitHub Actions"],
+    github: "https://github.com/ProgrammingWithRafay/CarInsightPro",
+    live: "https://car-insight-pro-ten.vercel.app/",
+    border: "#f59e0b",
+    glow: "rgba(245,158,11,0.12)",
+  },
+  {
     title: "Interactive 3D Portfolio",
     description:
       "A highly interactive, visually immersive developer portfolio. Engineered complex SVG character animations with dynamic mouse-tracking pupils, cinematic loading sequences, and mathematically calculated 3D tilt effects using React hooks and native DOM APIs.",
-    tech: ["React 18", "TypeScript", "Tailwind CSS", "SVG Filters", "Vite"],
+    tech: ["React", "TypeScript", "Tailwind CSS", "SVG Filters", "Vite"],
     github: "https://github.com/ProgrammingWithRafay/Portfolio",
     border: "#818cf8",
     glow: "rgba(129,140,248,0.12)",
@@ -68,13 +77,13 @@ const PROJECTS: Project[] = [
     glow: "rgba(16,185,129,0.12)",
   },
   {
-    title: "CarInsight Pro",
-    description: "Built a MERN-stack platform for side-by-side car specification comparisons with an interactive matchmaking quiz and a custom CMS. Designed RESTful API routes in Express to serve structured car data from MongoDB. Configured a CI/CD pipeline using GitHub Actions, running 7 Jest and Supertest integration tests against an in-memory MongoDB instance on every push before deployment to Railway.",
-    tech: ["React", "Node.js", "MongoDB", "Express", "TanStack Query", "Railway", "GitHub Actions"],
-    github: "https://github.com/ProgrammingWithRafay/CarInsightPro",
-    live: "https://car-insight-pro-ten.vercel.app/",
-    border: "#f59e0b",
-    glow: "rgba(245,158,11,0.12)",
+    title: "MiniC Compiler",
+    description:
+      "Engineered a complete 7-phase C compiler from scratch using C, Flex, and Bison. Features lexical and syntax analysis (AST), semantic validation, Three-Address Code (TAC) generation with Constant Folding and Dead Code Elimination, x86 pseudo-assembly generation, and a custom TAC interpreter.",
+    tech: ["C", "Flex", "Bison", "AST", "TAC", "Make"],
+    github: "https://github.com/ProgrammingWithRafay/Mini-C-Language-Compiler",
+    border: "#8b5cf6",
+    glow: "rgba(139,92,246,0.12)",
   },
   {
     title: "FestivAI",
@@ -83,15 +92,6 @@ const PROJECTS: Project[] = [
     github: "https://github.com/alif223571/Final-Year-Project-One",
     border: "#ec4899",
     glow: "rgba(236,72,153,0.12)",
-  },
-  {
-    title: "MiniC Compiler",
-    description:
-      "Engineered a complete 7-phase C compiler from scratch using C, Flex, and Bison. Features lexical and syntax analysis (AST), semantic validation, Three-Address Code (TAC) generation with Constant Folding and Dead Code Elimination, x86 pseudo-assembly generation, and a custom TAC interpreter.",
-    tech: ["C", "Flex", "Bison", "AST", "TAC", "Make"],
-    github: "https://github.com/ProgrammingWithRafay/Mini-C-Language-Compiler",
-    border: "#8b5cf6",
-    glow: "rgba(139,92,246,0.12)",
   },
 ];
 
