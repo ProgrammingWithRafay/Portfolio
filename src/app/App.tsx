@@ -24,6 +24,7 @@ const SKILLS = [
   { name: "Nodemon", tag: "NM", color: "#76d04b" },
   { name: "GitHub Actions", tag: "GA", color: "#2088FF" },
   { name: "Supabase", tag: "SB", color: "#3ECF8E" },
+  { name: "TanStack Query", tag: "TQ", color: "#FF4154" },
   { name: "Railway", tag: "RW", color: "#ffffff" },
 ];
 
@@ -42,7 +43,7 @@ const PROJECTS: Project[] = [
     title: "HostelSpot",
     description:
       "A full-stack student hostel booking platform featuring real-time updates, dual dashboards for students and owners, and comprehensive admin management.",
-    tech: ["React", "TypeScript", "Supabase", "Tailwind CSS"],
+    tech: ["React", "TypeScript", "Supabase", "Tailwind CSS", "GitHub Actions"],
     github: "https://github.com/ProgrammingWithRafay/HostelSpot",
     live: "https://hostel-spot.vercel.app/",
     border: "#38bdf8",
@@ -67,8 +68,8 @@ const PROJECTS: Project[] = [
   },
   {
     title: "CarInsight Pro",
-    description: "A comprehensive MERN-stack car research platform featuring side-by-side spec comparisons, interactive matchmaking quizzes, and a custom built-in CMS.",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
+    description: "Built a MERN-stack platform for side-by-side car specification comparisons with an interactive matchmaking quiz and a custom CMS. Designed RESTful API routes in Express to serve structured car data from MongoDB. Configured a CI/CD pipeline using GitHub Actions, running 7 Jest and Supertest integration tests against an in-memory MongoDB instance on every push before deployment to Railway.",
+    tech: ["React", "Node.js", "MongoDB", "Express", "TanStack Query", "Railway", "GitHub Actions"],
     github: "https://github.com/ProgrammingWithRafay/CarInsightPro",
     live: "https://car-insight-pro-ten.vercel.app/",
     border: "#f59e0b",
