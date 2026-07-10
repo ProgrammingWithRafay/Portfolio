@@ -26,6 +26,7 @@ const SKILLS = [
   { name: "Supabase", tag: "SB", color: "#3ECF8E" },
   { name: "TanStack Query", tag: "TQ", color: "#FF4154" },
   { name: "Railway", tag: "RW", color: "#ffffff" },
+  { name: "Docker", tag: "DK", color: "#2496ED" },
 ];
 
 type Project = {
@@ -43,7 +44,7 @@ const PROJECTS: Project[] = [
     title: "HostelSpot",
     description:
       "Developed a full-stack hostel management platform featuring secure role-based routing for students and owners. Implemented interactive map-based search using Leaflet, automated email notifications via Deno Edge Functions and Brevo, and real-time data synchronization with Supabase PostgreSQL.",
-    tech: ["React", "TypeScript", "Supabase", "Tailwind CSS", "Deno Edge Functions", "Leaflet", "Brevo"],
+    tech: ["React", "TypeScript", "Supabase", "Tailwind CSS", "Deno Edge Functions", "Leaflet", "Brevo", "Docker"],
     github: "https://github.com/ProgrammingWithRafay/HostelSpot",
     live: "https://hostel-spot.vercel.app/",
     border: "#38bdf8",
@@ -95,7 +96,7 @@ const PROJECTS: Project[] = [
   },
 ];
 
-const NAV_LINKS = ["About", "Skills", "Projects", "Contact"];
+const NAV_LINKS = ["About", "Skills", "Projects", "Certifications", "Contact"];
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -1207,6 +1208,109 @@ export default function App() {
                 </div>
               </RevealOnScroll>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Certifications ── */}
+      <section id="certifications" className="py-28 relative">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(129,140,248,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(129,140,248,0.025) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
+        />
+        <div className="max-w-6xl mx-auto px-6">
+          <RevealOnScroll>
+            <div className="mb-14 text-center space-y-3">
+              <p
+                className="text-xs text-primary tracking-widest"
+                style={{ fontFamily: "'JetBrains Mono', monospace" }}
+              >
+                — CERTIFICATIONS —
+              </p>
+              <h2
+                className="text-3xl font-bold"
+                style={{ fontFamily: "'Orbitron', sans-serif" }}
+              >
+                Licenses & Certifications
+              </h2>
+            </div>
+          </RevealOnScroll>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <RevealOnScroll delay={0} className="h-full">
+              <div
+                className="group relative p-6 rounded-2xl flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 h-full"
+                style={{
+                  background: `rgba(13,22,40,0.8)`,
+                  border: `1px solid rgba(16,185,129,0.3)`,
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = `0 8px 32px rgba(16,185,129,0.25), 0 0 0 1px rgba(16,185,129,0.40)`;
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+                }}
+              >
+                <h3
+                  className="text-xl font-bold text-foreground"
+                  style={{ fontFamily: "'Orbitron', sans-serif", fontSize: "18px" }}
+                >
+                  Meta Full Stack Developer: Front-End & Back-End from Scratch
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                  Meta / Coursera
+                </p>
+                <div className="flex items-center gap-4 pt-1">
+                  <a
+                    href="https://www.coursera.org/specializations/meta-full-stack-developer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200"
+                  >
+                    <ExternalLink size={13} /> View Credential
+                  </a>
+                </div>
+              </div>
+            </RevealOnScroll>
+            <RevealOnScroll delay={150} className="h-full">
+              <div
+                className="group relative p-6 rounded-2xl flex flex-col gap-4 transition-all duration-300 hover:-translate-y-1 h-full"
+                style={{
+                  background: `rgba(13,22,40,0.8)`,
+                  border: `1px solid rgba(245,158,11,0.3)`,
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = `0 8px 32px rgba(245,158,11,0.25), 0 0 0 1px rgba(245,158,11,0.40)`;
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+                }}
+              >
+                <h3
+                  className="text-xl font-bold text-foreground"
+                  style={{ fontFamily: "'Orbitron', sans-serif", fontSize: "18px" }}
+                >
+                  Prompt Engineering
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                  Coursera
+                </p>
+                <div className="flex items-center gap-4 pt-1">
+                  <a
+                    href="https://www.coursera.org/specializations/prompt-engineering"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-foreground transition-colors duration-200"
+                  >
+                    <ExternalLink size={13} /> View Credential
+                  </a>
+                </div>
+              </div>
+            </RevealOnScroll>
           </div>
         </div>
       </section>
