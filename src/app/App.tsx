@@ -10,11 +10,17 @@ const SKILLS = [
   { name: "TypeScript", tag: "TS", color: "#3178c6" },
   { name: "Python", tag: "PY", color: "#3b82f6" },
   { name: "React", tag: "⚛", color: "#38bdf8" },
+  { name: "Next.js", tag: "NX", color: "#ffffff" },
   { name: "React Router", tag: "RR", color: "#CA4245" },
   { name: "Node.js", tag: "N", color: "#22c55e" },
   { name: "Express.js", tag: "EX", color: "#404d59" },
+  { name: "FastAPI", tag: "FA", color: "#009688" },
   { name: "MongoDB", tag: "MDB", color: "#47A248" },
   { name: "PostgreSQL", tag: "PG", color: "#336791" },
+  { name: "PyTorch", tag: "PT", color: "#EE4C2C" },
+  { name: "OpenCV", tag: "CV", color: "#5C3EE8" },
+  { name: "YOLOv11", tag: "YO", color: "#00FFFF" },
+  { name: "scikit-learn", tag: "SK", color: "#F7931E" },
   { name: "TailwindCSS", tag: "TW", color: "#38bdf8" },
   { name: "Bootstrap", tag: "BS", color: "#8511FA" },
   { name: "Vite", tag: "⚡", color: "#646CFF" },
@@ -27,6 +33,7 @@ const SKILLS = [
   { name: "TanStack Query", tag: "TQ", color: "#FF4154" },
   { name: "Railway", tag: "RW", color: "#ffffff" },
   { name: "Docker", tag: "DK", color: "#2496ED" },
+  { name: "Jest", tag: "JE", color: "#C21325" },
 ];
 
 type Project = {
@@ -55,18 +62,16 @@ const PROJECTS: Project[] = [
     description: "Built a MERN-stack platform for side-by-side car specification comparisons with an interactive matchmaking quiz and a custom CMS. Designed RESTful API routes in Express to serve structured car data from MongoDB. Configured a CI/CD pipeline using GitHub Actions, running 7 Jest and Supertest integration tests against an in-memory MongoDB instance on every push before deployment to Railway.",
     tech: ["React", "Node.js", "MongoDB", "Express", "TanStack Query", "Railway", "GitHub Actions"],
     github: "https://github.com/ProgrammingWithRafay/CarInsightPro",
-    live: "https://car-insight-pro-ten.vercel.app/",
     border: "#f59e0b",
     glow: "rgba(245,158,11,0.12)",
   },
   {
-    title: "Interactive 3D Portfolio",
-    description:
-      "A highly interactive, visually immersive developer portfolio. Engineered complex SVG character animations with dynamic mouse-tracking pupils, cinematic loading sequences, and mathematically calculated 3D tilt effects using React hooks and native DOM APIs.",
-    tech: ["React", "TypeScript", "Tailwind CSS", "SVG Filters", "Vite"],
-    github: "https://github.com/ProgrammingWithRafay/Portfolio",
-    border: "#818cf8",
-    glow: "rgba(129,140,248,0.12)",
+    title: "HelmetGuard AI",
+    description: "Built a full-stack computer vision system that detects whether motorcycle riders are wearing helmets from uploaded images/video or a live webcam feed, using a fine-tuned YOLOv11 model. Developed a FastAPI backend for real-time inference and a Next.js dashboard displaying live detections.",
+    tech: ["Next.js", "FastAPI", "YOLOv11", "OpenCV", "PyTorch", "Docker"],
+    github: "https://github.com/ProgrammingWithRafay/Helmet-Guard-AI",
+    border: "#00FFFF",
+    glow: "rgba(0,255,255,0.12)",
   },
   {
     title: "PakTravel AI System",
@@ -77,22 +82,23 @@ const PROJECTS: Project[] = [
     border: "#10b981",
     glow: "rgba(16,185,129,0.12)",
   },
-  {
-    title: "MiniC Compiler",
-    description:
-      "Engineered a complete 7-phase C compiler from scratch using C, Flex, and Bison. Features lexical and syntax analysis (AST), semantic validation, Three-Address Code (TAC) generation with Constant Folding and Dead Code Elimination, x86 pseudo-assembly generation, and a custom TAC interpreter.",
-    tech: ["C", "Flex", "Bison", "AST", "TAC", "Make"],
-    github: "https://github.com/ProgrammingWithRafay/Mini-C-Language-Compiler",
-    border: "#8b5cf6",
-    glow: "rgba(139,92,246,0.12)",
-  },
+
   {
     title: "FestivAI",
-    description: "An intelligent event management platform featuring RSVP-driven booking, dynamic QR check-ins, AI-generated e-cards, and comprehensive venue management.",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
+    description: "An intelligent event management platform featuring RSVP-driven booking, dynamic QR check-ins, venue management, and AI-generated e-card invitations. Integrated Google Maps API for real-time hall location discovery and implemented JWT-based role-based access control.",
+    tech: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "Google Maps API", "JWT"],
     github: "https://github.com/alif223571/Final-Year-Project-One",
     border: "#ec4899",
     glow: "rgba(236,72,153,0.12)",
+  },
+  {
+    title: "Interactive 3D Portfolio",
+    description:
+      "A highly interactive, visually immersive developer portfolio. Engineered complex SVG character animations with dynamic mouse-tracking pupils, cinematic loading sequences, and mathematically calculated 3D tilt effects using React hooks and native DOM APIs.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "SVG Filters", "Vite"],
+    github: "https://github.com/ProgrammingWithRafay/Portfolio",
+    border: "#818cf8",
+    glow: "rgba(129,140,248,0.12)",
   },
 ];
 
@@ -804,14 +810,14 @@ export default function App() {
             <p
               className="text-base text-muted-foreground leading-relaxed max-w-md"
             >
-              FULL STACK DEVELOPER | MACHINE LEARNING ENGINEER
+              FULL STACK AI ENGINEER
             </p>
 
             <div
               className="flex items-center gap-3 flex-wrap"
               style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "13px" }}
             >
-              {["MERN", "Python", "PostgreSQL", "Deep Learning"].map((tag) => (
+              {["MERN", "NextJS", "PostgreSQL", "Deep Learning", "Computer Vision"].map((tag) => (
                 <span
                   key={tag}
                   className="px-3 py-1 rounded text-primary/80"
@@ -1023,11 +1029,11 @@ export default function App() {
                 </span>
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                I am pursuing Computer Science at the <strong className="text-foreground">National University of Computer and Emerging Sciences (FAST)</strong>, one of Pakistan&apos;s premier CS institutions. Set to graduate in 2026, I am a passionate <strong className="text-foreground">Full Stack Developer</strong> and a <strong className="text-foreground">Machine Learning Engineer</strong>.
+                I am a Computer Science graduate from the <strong className="text-foreground">National University of Computer and Emerging Sciences (FAST)</strong>, one of Pakistan&apos;s premier CS institutions. As a passionate <strong className="text-foreground">Full Stack AI Engineer</strong>, I hold a Bachelor of Science in Computer Science.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 I love turning complex problems into clean software, whether
-                that&apos;s building scalable MERN stack applications, designing robust PostgreSQL databases, or exploring the fascinating world of Deep Learning and Python. I&apos;m always eager to learn and tackle the next big challenge!
+                that&apos;s building scalable MERN and Next.js applications, training computer vision models with PyTorch and YOLO, or designing robust AI-powered systems. I&apos;m always eager to learn and tackle the next big challenge!
               </p>
               <div
                 className="flex items-center gap-3 text-sm text-primary"
