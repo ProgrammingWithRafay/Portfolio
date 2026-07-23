@@ -55,7 +55,6 @@ const SKILL_CATEGORIES = [
       { name: "Docker", tag: "DK", color: "#2496ED" },
       { name: "GitHub Actions", tag: "GA", color: "#2088FF" },
       { name: "Vercel", tag: "▲", color: "#ffffff" },
-      { name: "Railway", tag: "RW", color: "#ffffff" },
       { name: "Jest", tag: "JE", color: "#C21325" },
       { name: "Nodemon", tag: "NM", color: "#76d04b" },
     ]
@@ -85,8 +84,8 @@ const PROJECTS: Project[] = [
   },
   {
     title: "CarInsight Pro",
-    description: "Built a MERN-stack platform for side-by-side car specification comparisons with an interactive matchmaking quiz and a custom CMS. Designed RESTful API routes in Express to serve structured car data from MongoDB. Configured a CI/CD pipeline using GitHub Actions, running 7 Jest and Supertest integration tests against an in-memory MongoDB instance on every push before deployment to Railway.",
-    tech: ["React", "Node.js", "MongoDB", "Express", "TanStack Query", "Railway", "GitHub Actions"],
+    description: "Built a MERN-stack platform for side-by-side car specification comparisons with an interactive matchmaking quiz and a custom CMS. Designed RESTful API routes in Express to serve structured car data from MongoDB. Configured a CI/CD pipeline using GitHub Actions, running 7 Jest and Supertest integration tests against an in-memory MongoDB instance on every push.",
+    tech: ["React", "Node.js", "MongoDB", "Express", "TanStack Query", "GitHub Actions"],
     github: "https://github.com/ProgrammingWithRafay/CarInsightPro",
     border: "#f59e0b",
     glow: "rgba(245,158,11,0.12)",
