@@ -3,37 +3,63 @@ import { Github, Linkedin, Mail, ExternalLink, Code2, ChevronDown, FileText, Men
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
-const SKILLS = [
-  { name: "C / C++", tag: "C", color: "#00599C" },
-  { name: "HTML5 & CSS3", tag: "H5", color: "#E34F26" },
-  { name: "JavaScript", tag: "JS", color: "#F7DF1E" },
-  { name: "TypeScript", tag: "TS", color: "#3178c6" },
-  { name: "Python", tag: "PY", color: "#3b82f6" },
-  { name: "React", tag: "⚛", color: "#38bdf8" },
-  { name: "Next.js", tag: "NX", color: "#ffffff" },
-  { name: "React Router", tag: "RR", color: "#CA4245" },
-  { name: "Node.js", tag: "N", color: "#22c55e" },
-  { name: "Express.js", tag: "EX", color: "#404d59" },
-  { name: "FastAPI", tag: "FA", color: "#009688" },
-  { name: "MongoDB", tag: "MDB", color: "#47A248" },
-  { name: "PostgreSQL", tag: "PG", color: "#336791" },
-  { name: "PyTorch", tag: "PT", color: "#EE4C2C" },
-  { name: "OpenCV", tag: "CV", color: "#5C3EE8" },
-  { name: "YOLOv11", tag: "YO", color: "#00FFFF" },
-  { name: "scikit-learn", tag: "SK", color: "#F7931E" },
-  { name: "TailwindCSS", tag: "TW", color: "#38bdf8" },
-  { name: "Bootstrap", tag: "BS", color: "#8511FA" },
-  { name: "Vite", tag: "⚡", color: "#646CFF" },
-  { name: "Vercel", tag: "▲", color: "#ffffff" },
-  { name: "JWT", tag: "JWT", color: "#ffffff" },
-  { name: "jQuery", tag: "jQ", color: "#0769AD" },
-  { name: "Nodemon", tag: "NM", color: "#76d04b" },
-  { name: "GitHub Actions", tag: "GA", color: "#2088FF" },
-  { name: "Supabase", tag: "SB", color: "#3ECF8E" },
-  { name: "TanStack Query", tag: "TQ", color: "#FF4154" },
-  { name: "Railway", tag: "RW", color: "#ffffff" },
-  { name: "Docker", tag: "DK", color: "#2496ED" },
-  { name: "Jest", tag: "JE", color: "#C21325" },
+const SKILL_CATEGORIES = [
+  {
+    category: "Languages",
+    skills: [
+      { name: "JavaScript", tag: "JS", color: "#F7DF1E" },
+      { name: "TypeScript", tag: "TS", color: "#3178c6" },
+      { name: "Python", tag: "PY", color: "#3b82f6" },
+      { name: "C / C++", tag: "C", color: "#00599C" },
+      { name: "HTML5 & CSS3", tag: "H5", color: "#E34F26" },
+    ]
+  },
+  {
+    category: "Frontend",
+    skills: [
+      { name: "React", tag: "⚛", color: "#38bdf8" },
+      { name: "Next.js", tag: "NX", color: "#ffffff" },
+      { name: "TailwindCSS", tag: "TW", color: "#38bdf8" },
+      { name: "React Router", tag: "RR", color: "#CA4245" },
+      { name: "TanStack Query", tag: "TQ", color: "#FF4154" },
+      { name: "Vite", tag: "⚡", color: "#646CFF" },
+      { name: "Bootstrap", tag: "BS", color: "#8511FA" },
+      { name: "jQuery", tag: "jQ", color: "#0769AD" },
+    ]
+  },
+  {
+    category: "Backend & DB",
+    skills: [
+      { name: "Node.js", tag: "N", color: "#22c55e" },
+      { name: "Express.js", tag: "EX", color: "#404d59" },
+      { name: "FastAPI", tag: "FA", color: "#009688" },
+      { name: "MongoDB", tag: "MDB", color: "#47A248" },
+      { name: "PostgreSQL", tag: "PG", color: "#336791" },
+      { name: "Supabase", tag: "SB", color: "#3ECF8E" },
+      { name: "JWT", tag: "JWT", color: "#ffffff" },
+    ]
+  },
+  {
+    category: "AI & ML",
+    skills: [
+      { name: "PyTorch", tag: "PT", color: "#EE4C2C" },
+      { name: "OpenCV", tag: "CV", color: "#5C3EE8" },
+      { name: "YOLOv11", tag: "YO", color: "#00FFFF" },
+      { name: "scikit-learn", tag: "SK", color: "#F7931E" },
+      { name: "Kaggle", tag: "KG", color: "#20BEFF" },
+    ]
+  },
+  {
+    category: "DevOps & Tools",
+    skills: [
+      { name: "Docker", tag: "DK", color: "#2496ED" },
+      { name: "GitHub Actions", tag: "GA", color: "#2088FF" },
+      { name: "Vercel", tag: "▲", color: "#ffffff" },
+      { name: "Railway", tag: "RW", color: "#ffffff" },
+      { name: "Jest", tag: "JE", color: "#C21325" },
+      { name: "Nodemon", tag: "NM", color: "#76d04b" },
+    ]
+  }
 ];
 
 type Project = {
@@ -68,7 +94,7 @@ const PROJECTS: Project[] = [
   {
     title: "HelmetGuard AI",
     description: "Built a full-stack computer vision system that detects whether motorcycle riders are wearing helmets from uploaded images/video or a live webcam feed, using a fine-tuned YOLOv11 model. Developed a FastAPI backend for real-time inference and a Next.js dashboard displaying live detections.",
-    tech: ["Next.js", "FastAPI", "YOLOv11", "OpenCV", "PyTorch", "Docker"],
+    tech: ["Next.js", "FastAPI", "YOLOv11", "OpenCV", "PyTorch", "Docker", "Kaggle"],
     github: "https://github.com/ProgrammingWithRafay/Helmet-Guard-AI",
     border: "#00FFFF",
     glow: "rgba(0,255,255,0.12)",
@@ -1074,37 +1100,46 @@ export default function App() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {SKILLS.map((skill) => (
-                <div
-                  key={skill.name}
-                  className="group p-4 rounded-xl flex flex-col items-center gap-3 cursor-default transition-all duration-200 hover:scale-105"
-                  style={{
-                    background: "rgba(13,22,40,0.6)",
-                    border: `1px solid rgba(255,255,255,0.06)`,
-                  }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLDivElement).style.border = `1px solid ${skill.color}55`;
-                    (e.currentTarget as HTMLDivElement).style.boxShadow = `0 0 16px ${skill.color}22`;
-                  }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLDivElement).style.border = "1px solid rgba(255,255,255,0.06)";
-                    (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
-                  }}
-                >
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold"
-                    style={{
-                      background: `${skill.color}18`,
-                      color: skill.color,
-                      fontFamily: "'JetBrains Mono', monospace",
-                    }}
-                  >
-                    {skill.tag}
+            <div className="flex flex-col gap-12">
+              {SKILL_CATEGORIES.map((category) => (
+                <div key={category.category} className="space-y-6">
+                  <h3 className="text-xl font-bold border-b border-primary/20 pb-2 inline-block" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                    {category.category}
+                  </h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    {category.skills.map((skill) => (
+                      <div
+                        key={skill.name}
+                        className="group p-4 rounded-xl flex flex-col items-center gap-3 cursor-default transition-all duration-200 hover:scale-105"
+                        style={{
+                          background: "rgba(13,22,40,0.6)",
+                          border: `1px solid rgba(255,255,255,0.06)`,
+                        }}
+                        onMouseEnter={(e) => {
+                          (e.currentTarget as HTMLDivElement).style.border = `1px solid ${skill.color}55`;
+                          (e.currentTarget as HTMLDivElement).style.boxShadow = `0 0 16px ${skill.color}22`;
+                        }}
+                        onMouseLeave={(e) => {
+                          (e.currentTarget as HTMLDivElement).style.border = "1px solid rgba(255,255,255,0.06)";
+                          (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
+                        }}
+                      >
+                        <div
+                          className="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold"
+                          style={{
+                            background: `${skill.color}18`,
+                            color: skill.color,
+                            fontFamily: "'JetBrains Mono', monospace",
+                          }}
+                        >
+                          {skill.tag}
+                        </div>
+                        <span className="text-xs text-center text-muted-foreground group-hover:text-foreground transition-colors duration-200 leading-tight">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                  <span className="text-xs text-center text-muted-foreground group-hover:text-foreground transition-colors duration-200 leading-tight">
-                    {skill.name}
-                  </span>
                 </div>
               ))}
             </div>
