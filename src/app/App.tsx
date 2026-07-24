@@ -1022,7 +1022,7 @@ export default function App() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { num: "FAST", label: "University", suffix: "" },
-                { num: "6", label: "Projects", suffix: "" },
+                { num: "7", label: "Projects", suffix: "" },
                 { num: "5", label: "Languages", suffix: "+" },
                 { num: "2026", label: "Graduate", suffix: "" },
               ].map((s) => (
