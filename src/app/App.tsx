@@ -100,13 +100,13 @@ const PROJECTS: Project[] = [
     glow: "rgba(0,255,255,0.12)",
   },
   {
-    title: "PakTravel AI System",
-    description:
-      "Developed a comprehensive AI suite for intercity travel. Implemented A* search for route optimization, a propositional logic engine for legal inference, CSP with AC-3 for bus scheduling, MLP neural networks for delay prediction, and K-Means clustering for passenger segmentation.",
-    tech: ["Python", "scikit-learn", "NetworkX", "Pandas", "Neural Networks", "CSP"],
-    github: "https://github.com/ProgrammingWithRafay/PakTravel-AI-System",
-    border: "#10b981",
-    glow: "rgba(16,185,129,0.12)",
+    title: "ELD Trip Planner",
+    description: "A full-stack web application designed to help commercial truck drivers plan their routes and automatically generate FMCSA-compliant Electronic Logging Device (ELD) driver logs. Features an isolated HOS compliance engine to track duty status limits, automated route scheduling with Leaflet map visualizations, and dynamic generation of standard FMCSA daily graph grids in SVG.",
+    tech: ["React", "Vite", "Leaflet", "Python", "Django", "Django REST Framework"],
+    github: "https://github.com/ProgrammingWithRafay/ELD-Trip-Planner",
+    live: "https://eld-trip-planner-gold.vercel.app/",
+    border: "#a855f7",
+    glow: "rgba(168,85,247,0.12)",
   },
 
   {
@@ -125,6 +125,15 @@ const PROJECTS: Project[] = [
     github: "https://github.com/ProgrammingWithRafay/Portfolio",
     border: "#818cf8",
     glow: "rgba(129,140,248,0.12)",
+  },
+  {
+    title: "PakTravel AI System",
+    description:
+      "Developed a comprehensive AI suite for intercity travel. Implemented A* search for route optimization, a propositional logic engine for legal inference, CSP with AC-3 for bus scheduling, MLP neural networks for delay prediction, and K-Means clustering for passenger segmentation.",
+    tech: ["Python", "scikit-learn", "NetworkX", "Pandas", "Neural Networks", "CSP"],
+    github: "https://github.com/ProgrammingWithRafay/PakTravel-AI-System",
+    border: "#10b981",
+    glow: "rgba(16,185,129,0.12)",
   },
 ];
 
