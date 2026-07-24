@@ -30,6 +30,7 @@ const SKILL_CATEGORIES = [
   {
     category: "Backend & DB",
     skills: [
+      { name: "Django", tag: "DJ", color: "#092e20" },
       { name: "Node.js", tag: "N", color: "#22c55e" },
       { name: "Express.js", tag: "EX", color: "#404d59" },
       { name: "FastAPI", tag: "FA", color: "#009688" },
