@@ -845,7 +845,7 @@ export default function App() {
             <p
               className="text-base text-muted-foreground leading-relaxed max-w-md"
             >
-              FULL STACK AI ENGINEER
+              FULL STACK AI/ML ENGINEER
             </p>
 
             <div
